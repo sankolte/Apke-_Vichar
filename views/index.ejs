@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quora Posts</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">Apke Vichar</h1>
+    <div class="actions">
+      <a href="/posts/new" class="btn-create">+ Create New Post</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="posts">
+     <% posts.forEach(post => { %>
+  <div class="post">
+    <h3 class="username">@<%= post.username %></h3>
+    <p class="content"><%= post.content %></p>
+    
+    <div class="post-actions">
+      <a href="/posts/<%= post.id %>" class="btn-view">View</a>
+      <a href="/posts/<%= post.id %>/edit" class="btn-edit">Edit</a>
+
+      <!-- Delete Form -->
+      <form method="POST" action="/posts/<%= post.id %>?_method=DELETE" class="delete-form">
+        <button type="submit" class="btn-delete">Delete</button>
+      </form>
+    </div>
+  </div>
+<% }) %>
+
+    </div>
+  </main>
+</body>
+</html>

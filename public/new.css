@@ -1,0 +1,95 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #2b0000, #660000, #8b0000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #f5f5f5;
+}
+
+/* Container */
+form {
+  background: rgba(30, 0, 0, 0.9);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+form:hover {
+  transform: translateY(-3px);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff4d4d;
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+/* Inputs & Textarea */
+input, textarea {
+  padding: 14px 16px;
+  border: 1px solid #660000;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #bbb;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff3333;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+  min-height: 120px;
+  line-height: 1.4;
+}
+
+/* Button */
+button {
+  padding: 14px;
+  background: linear-gradient(135deg, #990000, #cc0000);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #b30000, #ff1a1a);
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+}
+
+button:active {
+  transform: scale(0.98);
+}
